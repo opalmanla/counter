@@ -12,11 +12,15 @@ function App() {
   };
 
   return (
-    <div>
-      <div>
-        <button onClick={decrement}>-</button>
-        <span>{count}</span>
-        <button onClick={increment}>+</button>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <div className="flex items-center space-x-4">
+        <button onClick={decrement} className="px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600 disabled:bg-red-300">
+          -
+        </button>
+        <span className="text-4xl font-bold">{count}</span>
+        <button onClick={increment} className="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-600">
+          +
+        </button>
       </div>
     </div>
   )
